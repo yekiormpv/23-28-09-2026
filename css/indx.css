@@ -1,0 +1,93 @@
+h1 {
+    margin: 16px 0;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+}
+
+.hero {
+    color: white;
+    background: linear-gradient(135deg, #252d35, #0e1215)
+}
+
+.hero-grid {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 48px;
+    padding: 70px 0;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top:  26px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s easy;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    color: black;
+    background: #f0b429;
+}
+
+.btn-ghost {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-panel {
+    position: relative;
+    padding: 34px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rbga(0, 0, 0, 0.2);
+}
+
+.hero-panel::before {
+    content: "</>";
+    position: absolute;
+    top: -28px;
+    right: 20px;
+    color: #f0b429;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.feature-strip {
+    padding: 24px 0;
+    background: white;
+    border: 1px solid #dfe4e8;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.features div {
+    display: grid;
+}
+
+@media (max-width: 800px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    } 
+
+    .hero-grid {
+        min-height: auto;
+    }
