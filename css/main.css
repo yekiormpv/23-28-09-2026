@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #20262c;
+    background: #f4f6f8;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(92%, 1180px);
+    margin-inline: auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(21, 26, 32, 0.96);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    padding: 10px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: rgb(225, 207, 9);
+    background: rgba(240, 180, 41, 0.14);
+}
+
+.hero {
+    color: white;
+    background: linear-gradient(135deg, #252d35, #0e1215)
+}
+
+.hero-grid {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 48px;
+    padding: 70px 0;
+}
+
+.eyebrow {
+    color: #f0b429;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 16px 0;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top:  26px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s easy;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    color: black;
+    background: #f0b429;
+}
+
+.btn-ghost {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-panel {
+    position: relative;
+    padding: 34px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rbga(0, 0, 0, 0.2);
+}
+
+.hero-panel::before {
+    content: "</>";
+    position: absolute;
+    top: -28px;
+    right: 20px;
+    color: #f0b429;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.feature-strip {
+    padding: 24px 0;
+    background: white;
+    border: 1px solid #dfe4e8;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.features div {
+    display: grid;
+}
+
+.site-footer {
+    padding: 28px 0;
+    color: white;
+    background: #11161b;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+.footer-row img {
+    width: 64px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 14px 0;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    } 
+
+    .hero-grid {
+        min-height: auto;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+}
